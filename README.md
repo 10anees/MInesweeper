@@ -38,7 +38,22 @@ OR
 - Custom sprite for winning/losing
 
 ##  Screenshots
- Make sure you have the following files in the same directory to run the application. All files are in the same directory with the name release on github. These also include the required SFML libraries to run the application along with other required .dll files to run on x64 architecture.
+
+Extract zip file
+
+![Screenshot 2023-12-13 234236](https://github.com/10anees/MInesweeper/assets/128053118/d60ac1d4-2b34-43cf-b380-6b4902ba2ddd)
+
+Open "Release" Directory
+
+![Screenshot 2023-12-13 234250](https://github.com/10anees/MInesweeper/assets/128053118/3204c131-9d52-4d75-af38-f074b76a46ed)
+
+
+
+### Make sure you have the following files in the same directory to run the application. All files are in the same directory with the name release on github. These also include the required SFML libraries to run the application along with other required .dll files to run on x64 architecture.
+
+
+
+Run the executable file
  
 ![Readme_instructions](https://github.com/10anees/MInesweeper/assets/128053118/e4d86ef7-cc04-4aa4-98d6-c4703e8e57f2)
 
