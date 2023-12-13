@@ -67,7 +67,7 @@ Reveal all hidden tiles without detonating a mine to win. You also need to have 
 
 Flagging is a way for the player to keep in check the predicted position of the mines. To make sure this feature is fair, one can only win if they have a positive flag count.
 
-## Authors
+## Contributors
 
 - Qatada Aadil (@l230998@lhr.nu.edu.pk)
 - Anees Hamid (@l230671@lhr.nu.edu.pk)
