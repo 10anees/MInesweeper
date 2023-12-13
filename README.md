@@ -33,7 +33,7 @@ To install and run Minesweeper, you need to have C++ and SFML installed on your 
 - Custom sprite for winning/losing
 
 ##  Screenshots
- Make sure you have the following files in same directory to run the application. All files are in the same directory with the name release on github.
+ Make sure you have the following files in the same directory to run the application. All files are in the same directory with the name release on github. These also include the required SFML libraries to run the application along with other required .dll files to run on x64 architecture.
  
 ![Readme_instructions](https://github.com/10anees/MInesweeper/assets/128053118/dbe4015e-1741-405c-9568-52910569c00d)
 
