@@ -25,6 +25,7 @@ again1:
     bool a = false;
 
     //---------------------------Texture/Sprites-----------------------------------------
+    
     Clock clock;
     Texture t;
     t.loadFromFile("Sprites/Tiles.jpg");
@@ -99,6 +100,7 @@ again1:
     escape.setPosition(13 * w, 10 * w);
 
     //---------------------------Game Grid-----------------------------------------------
+    
     for (int i = 1; i <= 10; i++)
         for (int j = 1; j <= 10; j++)
         {
@@ -152,6 +154,7 @@ again1:
     //}
 
     //-------------------------User Input/Flagging/Loop until exiting------------------------
+    
     while (app.isOpen())
     {
         Event e;
@@ -258,6 +261,7 @@ again1:
         }
 
         //----------------------------Styling Game Grid----------------------------------------
+        
         app.clear(Color::White);
 
         for (int i = 1; i <= 10; i++) {
@@ -307,7 +311,9 @@ again1:
         copyright.setString("By Anees & Qatada");
         copyright.setPosition(8 * w, 14.3 * w);
         app.draw(copyright);
+        
         //--------------------------------Displaying Window-------------------------------------
+        
         app.display();
     }
 
