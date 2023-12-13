@@ -20,12 +20,11 @@ again1:
     int grid[12][12];
     int showngrid[12][12];
     int bomb = 0;
-    int tiles = 80;
     bool win = true;
     bool a = false;
 
     //---------------------------Texture/Sprites-----------------------------------------
-    
+
     Clock clock;
     Texture t;
     t.loadFromFile("Sprites/Tiles.jpg");
@@ -100,7 +99,7 @@ again1:
     escape.setPosition(13 * w, 10 * w);
 
     //---------------------------Game Grid-----------------------------------------------
-    
+
     for (int i = 1; i <= 10; i++)
         for (int j = 1; j <= 10; j++)
         {
@@ -114,7 +113,6 @@ again1:
         }
     int flag = bomb;
     int count = 0;
-
     //-------------------Calculating number of mines around each cell-------------------------
 
     for (int i = 1; i <= 10; i++) {
@@ -154,14 +152,12 @@ again1:
     //}
 
     //-------------------------User Input/Flagging/Loop until exiting------------------------
-    
+
     while (app.isOpen())
     {
         Event e;
         while (app.pollEvent(e))
         {
-
-
             if (e.type == Event::Closed)
                 app.close();
             if (e.type == Event::KeyPressed)
@@ -217,11 +213,8 @@ again1:
                                 }
                                 else {
                                     showngrid[x][y] = grid[x][y];
-                                    if (showngrid[x][y] != 9) { //if any non mine tile is pressed tiles integer decreases
-                                        tiles--;
-                                    }
-                                    else {
-                                        win = false; //if bomb is pressed
+                                    if (showngrid[x][y] == 9) { //if any non mine tile is pressed tiles integer decreases
+                                        win = false;
                                     }
                                 }
                             }
@@ -261,7 +254,7 @@ again1:
         }
 
         //----------------------------Styling Game Grid----------------------------------------
-        
+
         app.clear(Color::White);
 
         for (int i = 1; i <= 10; i++) {
@@ -311,9 +304,9 @@ again1:
         copyright.setString("By Anees & Qatada");
         copyright.setPosition(8 * w, 14.3 * w);
         app.draw(copyright);
-        
+
         //--------------------------------Displaying Window-------------------------------------
-        
+
         app.display();
     }
 
