@@ -23,6 +23,11 @@ To install and run Minesweeper, you need to have C++ and SFML installed on your 
   5.Run the executable file
     Minesweeper.exe
 
+OR
+
+  2. Navigate to the project directory: Release
+  3. Run Minesweeper.exe
+
 ```
     
 ## Features
