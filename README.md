@@ -11,8 +11,8 @@ Minesweeper is a puzzle game in which the player is presented with a board fille
 To install and run Minesweeper, you need to have C++ and SFML installed on your system. Then, follow these steps:
 
 ```bash
-  1.Clone this repository to your local machine: git clone (https://github.com/10anees/Minesweeper)
-  2.Navigate to the project directory: Minesweeper
+  1. Clone this repository to your local machine: git clone (https://github.com/10anees/Minesweeper)/Download zip file and extract
+  2. Navigate to the project directory: Minesweeper
   3. Compile the source code: g++ Minesweeper.ccp
   4. Link the file with SFML Libraries:
      sfml-graphics-d.lib
@@ -20,8 +20,8 @@ To install and run Minesweeper, you need to have C++ and SFML installed on your 
      sfml-audio-d.lib
      sfml-network-d.lib
      sfml-system-d.lib
-  5.Run the executable file
-    Minesweeper.cpp
+  5. Run the executable file
+     Minesweeper.cpp
 
 OR
 
