@@ -21,7 +21,7 @@ To install and run Minesweeper, you need to have C++ and SFML installed on your 
      sfml-network-d.lib
      sfml-system-d.lib
   5.Run the executable file
-    Minesweeper.exe
+    Minesweeper.cpp
 
 OR
 
