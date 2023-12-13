@@ -14,7 +14,7 @@ int main() {
 
     RenderWindow app(VideoMode(725, 480), "Minesweeper!", Style::Close);
 
-    // empty space pressed = 0, bomb = 9, unknown tile = 10, flag = 11 
+    // empty tile pressed = 0, bomb = 9, hidden tile = 10, flag = 11 
 again1:
     int w = 32;
     int grid[12][12];
@@ -171,25 +171,25 @@ again1:
                 int y = pos.y / w;
                 if (e.key.code == Mouse::Left) {
                     if (count != bomb) {
-                        if (showngrid[x][y] != 11) {
-                            if (showngrid[x][y] != 0) {
+                        if (showngrid[x][y] != 11) { // for non flagged tiles
+                            if (showngrid[x][y] != 0) { // for non empty pressed tile
                                 showngrid[x][y] = grid[x][y];
                                 for (int i = 1; i <= 10; i++) {
                                     for (int j = 1; j <= 10; j++)
-                                        if (showngrid[x][y] == 9)
+                                        if (showngrid[x][y] == 9) //if bomb all hidden tiles get the value of grid[x][y] therefore showing every tile
                                             showngrid[i][j] = grid[i][j];
                                 }
-                                count = 0;
+                                count = 0; //count shows the number of flagged or hidden tiles. This variable allows to finish game evem if not every flagged is used just like in minesweeper.
                                 for (int i = 1; i <= 10; i++) {
                                     for (int j = 1; j <= 10; j++) {
-                                        if (showngrid[i][j] == 10 || showngrid[i][j] == 11) {
+                                        if (showngrid[i][j] == 10 || showngrid[i][j] == 11) { //if flagged  or hidden
                                             count++;
                                         }
                                     }
                                     if (count > bomb)
                                         break;
                                 }
-                                if (count == bomb) {
+                                if (count == bomb) { //count==bomb means that number of hidden tiles and flags are equal to number of mines resulting in a win
                                     win = true;
                                     goto aggain;
                                 }
@@ -214,11 +214,11 @@ again1:
                                 }
                                 else {
                                     showngrid[x][y] = grid[x][y];
-                                    if (showngrid[x][y] != 9) {
+                                    if (showngrid[x][y] != 9) { //if any non mine tile is pressed tiles integer decreases
                                         tiles--;
                                     }
                                     else {
-                                        win = false;
+                                        win = false; //if bomb is pressed
                                     }
                                 }
                             }
@@ -227,11 +227,11 @@ again1:
                 }
                 // FLAGS
                 else if (e.key.code == Mouse::Right) {
-                    if (showngrid[x][y] == 11) {
+                    if (showngrid[x][y] == 11) { //unflagging
                         showngrid[x][y] = 10;
                         flag++;
                     }
-                    else if (showngrid[x][y] == 10) {
+                    else if (showngrid[x][y] == 10) { //flagging
                         showngrid[x][y] = 11;
                         flag--;
                     }
@@ -244,13 +244,13 @@ again1:
         Vector2i mousePosition = Mouse::getPosition(app);
         if (smiley.getGlobalBounds().contains(mousePosition.x, mousePosition.y))
         {
-            if (e.type == Event::MouseButtonPressed)
+            if (e.type == Event::MouseButtonPressed) //retry button
                 if (e.key.code == (Mouse::Left))
                 {
                     goto again1;
                 }
         }
-        if (win && count != bomb) {
+        if (win && count != bomb) { //time runs until game is finished won/loss
             Time elapsed = clock.getElapsedTime();
             ostringstream stream;
             stream << "Time: " << elapsed.asSeconds() << " s";
